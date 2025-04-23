@@ -23,15 +23,16 @@ public:
         
             int num = digitToNum(i);
             countOfSingularDigits[num]++;
-            maxSize = max(maxSize, countOfSingularDigits[num]);
 
-        }
-
-        for(auto &[num, freq] : countOfSingularDigits){
-            if(maxSize == freq){
+            if(countOfSingularDigits[num] == maxSize){
                 count++;
+            }else if(countOfSingularDigits[num] > maxSize){
+                maxSize = countOfSingularDigits[num];
+                count = 1;
             }
+
         }
+
 
         return count;
     }
