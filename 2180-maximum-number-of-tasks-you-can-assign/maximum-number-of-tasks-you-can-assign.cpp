@@ -1,3 +1,5 @@
+// too much of lack of STLs and Syntax
+// Solve this question again for better understanding
 class Solution {
 public:
 
